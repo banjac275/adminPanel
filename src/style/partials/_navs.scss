@@ -1,9 +1,14 @@
 @import './modules/utilities.scss';
 @import './modules/colors.scss';
+@import 'mixins.scss';
 
 ul {
   @extend %ml-20;
   list-style-type: none;
+}
+
+li {
+  min-height: 0;
 }
 
 .nav {
@@ -12,7 +17,7 @@ ul {
 }
 
 .nav_top {
-  @extend %m-0, %t-0, %f-row, %space-between, %w-max;
+  @extend %t-0, %f-row, %space-between, %w-max;
   box-shadow: 0 8px 6px -6px $greyish-color;
   height: 35px;
   margin-left: -8px;
@@ -35,20 +40,42 @@ ul {
 .nav_sidebar {
   @extend %f-col;
   color: $white-color;
+  min-width: 250px;
+  margin-top: 10px;
+}
+
+.sidebar {
+  padding-right: 10px;
+  border-top: 1px solid $white-color;
+  border-bottom: 1px solid $white-color;
+  div {
+    @extend %flex, %space-between, %centered;
+    line-height: 40px;
+    cursor: pointer;
+    &:hover {
+      @include rgba(bg, $grey-color, .7);
+    }
+  }
+}
+
+.sidebar--dropdown {
+  @extend %flex, %f-col;
+    background-color: $black-color;
+    margin-right: -8px;
+    display: none;
+    div {
+      display: none;
+    }
 }
 
 a {
   text-decoration: none;
 }
 
-.dropdown_wrapper {
-  display: none;
-}
-
 .logo {
   background-color: $red-color;
   height: 35px;
-  width: 79%;
+  width: 258px;
 }
 
 .nav_sidebar--wrapper {
@@ -56,5 +83,6 @@ a {
   height: 98%;
   margin-left: -8px;
   padding-left: 8px;
-  width: 250px;
+  margin-right: 0;
+  order: 1;
 }

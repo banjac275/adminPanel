@@ -36,53 +36,57 @@
           <div class="dropdown btn btn--notification">
             <div><i class="fas fa-bell"></i> <i class="fas fa-caret-down"></i></div>
             <div class="dropdown_wrapper">
-              <div class="dropdown_wrapper--element"></div>
-              <div class="dropdown_wrapper--element"></div>
-              <div class="dropdown_wrapper--element"></div>
-              <div class="dropdown_wrapper--element"></div>
-              <div class="dropdown_wrapper--element"></div>
-              <div class="btn btn--dropdown_wrapper"></div>
+              <div class="dropdown_wrapper--element btn_dropdown"></div>
+              <div class="dropdown_wrapper--element btn_dropdown"></div>
+              <div class="dropdown_wrapper--element btn_dropdown"></div>
+              <div class="dropdown_wrapper--element btn_dropdown"></div>
+              <div class="dropdown_wrapper--element btn_dropdown"></div>
+              <div class="btn btn_dropdown btn--dropdown_wrapper"></div>
             </div>
           </div>
           <div class="dropdown btn btn--user">
             <div><i class="fas fa-user"></i> <i class="fas fa-caret-down"></i></div>
             <div class="dropdown_wrapper">
-              <div class="btn btn--profile"><i class="fas fa-user"></i> User Profile</div>
-              <div class="btn btn--settings"><i class="fas fa-cog"></i> Settings</div>
-              <div class="btn btn--logout"><i class="fas fa-sign-out-alt"></i> Logout</div>
+              <div class="btn btn_dropdown btn--profile"><i class="fas fa-user"></i> User Profile</div>
+              <div class="btn btn_dropdown btn--settings"><i class="fas fa-cog"></i> Settings</div>
+              <div class="btn btn_dropdown btn--logout"><i class="fas fa-sign-out-alt"></i> Logout</div>
             </div>
           </div>
         </div>
       </nav>
-      <aside class="nav_sidebar--wrapper">
-        <nav class="nav nav_sidebar">
-          <div>
-            <div>Users</div>
-            <ul>
-              <li>Content one</li>
-              <li>Content two</li>
-              <li>Content three</li>
-            </ul>
-          </div>
-          <div>
-            <div>Events</div>
-            <ul>
-              <li>Event one</li>
-              <li>Event two</li>
-              <li>Event three</li>
-            </ul>
-          </div>
-          <div>
-            <div>Companies</div>
-            <ul>
-              <li>Company one</li>
-              <li>Company two</li>
-              <li>Company three</li>
-            </ul>
-          </div>
-        </nav>
-      </aside>
-      <main></main>
+      <div class="content-wrapper">
+        <div class="nav_sidebar--wrapper">
+          <nav class="nav nav_sidebar">
+            <div class="sidebar sidebar_users">
+              <div>Users <i class="fas fa-caret-down"></i></div>
+              <div class="sidebar_users--dropdown sidebar--dropdown">
+                <div class="btn_dropdown">Content one</div>
+                <div class="btn_dropdown">Content two</div>
+                <div class="btn_dropdown">Content three</div>
+              </div>
+            </div>
+            <div class="sidebar sidebar_events">
+              <div>Events <i class="fas fa-caret-down"></i></div>
+              <div class="sidebar_events--dropdown sidebar--dropdown">
+                <div class="btn_dropdown">Event one</div>
+                <div class="btn_dropdown">Event two</div>
+                <div class="btn_dropdown">Event three</div>
+              </div>
+            </div>
+            <div class="sidebar sidebar_companies">
+              <div>Companies <i class="fas fa-caret-down"></i></div>
+              <div class="sidebar_companies--dropdown sidebar--dropdown">
+                <div class="btn_dropdown">Company one</div>
+                <div class="btn_dropdown">Company two</div>
+                <div class="btn_dropdown">Company three</div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <main class="main">
+          <div></div>
+        </main>
+      </div>
     </div>
   </body>
 </html>

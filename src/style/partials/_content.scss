@@ -1,0 +1,20 @@
+@import './modules/utilities.scss';
+@import './modules/colors.scss';
+
+.wrapper {
+  @extend %w-max;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+main {
+  background-color: $yellow-color;
+  width: calc(100% - 245px);
+  height: calc(100% - 20.5px);
+  order: 2;
+  z-index: 1;
+}
+
+.content-wrapper {
+  @extend %flex, %f-row;
+}

@@ -1,0 +1,75 @@
+@keyframes moveAside {
+  from {
+    max-width: 258px;
+  }
+  to {
+    max-width: 0;
+  }
+}
+
+@keyframes moveAsideRev {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 258px;
+  }
+}
+
+@keyframes rotateBtn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotateBtnRev {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes divStretch {
+  from {
+    min-width: calc(100% - 245px);
+  }
+  to {
+    min-width: 100%;
+  }
+}
+
+@keyframes divShrink {
+  from {
+    min-width: 100%;
+  }
+  to {
+    min-width: calc(100% - 245px);
+  }
+}
+
+@keyframes height-shrink {
+  from {
+    min-height: 32px;
+    opacity: 1;
+  }
+  to {
+    min-height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes height-expand {
+  from {
+    min-height: 0;
+    opacity: 0;
+  }
+  to {
+    min-height: 32px;
+    opacity: 1;
+  }
+}
