@@ -24,34 +24,52 @@ document.querySelector(".nav_top--menu_btn").addEventListener("click", (e) => {
 
 });
 
-let sidebar = document.querySelectorAll(".sidebar");
+let infoMessage = document.querySelectorAll(".info--message");
 
-sidebar.forEach((el) => {
-  let check = 0;
-  el.children[0].addEventListener("click", () => {
-    console.log(el.children[1].children);
-    check = animateHelper(el.children[1].children, check);
+infoMessage.forEach((el) => {
+  let temp = el.innerHTML;
+  el.innerHTML = temp.slice(0, 20);
+  el.innerHTML += "...";
+});
+
+let selList = [".sidebar", ".btn--user", ".btn--notification", ".btn--task", ".btn--mail"];
+
+listenerSetter(selList); 
+
+function listenerSetter(list) {
+  list.forEach(element => {
+    let query = document.querySelectorAll(element);
+
+    query.forEach((el) => {
+      let check = 0;
+      
+      el.children[0].addEventListener("click", (e) => {
+        e.stopPropagation();
+        check = animateHelper(el.children[1].children, check);
+      });
+    });
   });
-});
-
-let userBtn = document.querySelector(".btn--user");
-//console.log(userBtn.children[1].children);
-let checkIt = 0;
-userBtn.children[0].addEventListener("click", () => {
-  checkIt = animateHelper(userBtn.children[1].children, checkIt);
-});
+}
 
 function animateHelper(elementList, check) {
   if(!check){
     for (let i = 0; i < elementList.length; i++) {
+      let child;
+      (elementList[i].parentNode.parentNode.children[0].children[1] === undefined) ? child = elementList[i].parentNode.parentNode.children[0].children[0] : child = elementList[i].parentNode.parentNode.children[0].children[1];
       elementList[i].classList.add("height-expand");
+      elementList[i].parentNode.classList.remove("no-border");
+      child.classList.remove("fa-rotate-90");
       elementList[i].classList.remove("height-shrink");
       setTimeout(() => {elementList[i].style.display = "block"}, 200);
     } 
     return check = true;
   } else {
     for (let i = 0; i < elementList.length; i++) {
+      let child;
+      (elementList[i].parentNode.parentNode.children[0].children[1] === undefined) ? child = elementList[i].parentNode.parentNode.children[0].children[0] : child = elementList[i].parentNode.parentNode.children[0].children[1];
       elementList[i].classList.add("height-shrink");
+      elementList[i].parentNode.classList.add("no-border");
+      child.classList.add("fa-rotate-90");
       elementList[i].classList.remove("height-expand");
       setTimeout(() => {elementList[i].style.display = "none"}, 200);
     }

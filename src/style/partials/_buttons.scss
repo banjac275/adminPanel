@@ -1,7 +1,7 @@
-@import './modules/utilities.scss';
-@import './modules/colors.scss';
-@import 'mixins.scss';
-@import 'animations.scss';
+@import './modules/utilities';
+@import './modules/colors';
+@import 'mixins';
+@import 'animations';
 
 .btn {
   cursor: pointer;
@@ -12,8 +12,8 @@
 }
 
 .nav_sidebar--animated-left {
-  max-width: 0;
   animation: moveAside 1s ease;
+  max-width: 0;
 }
 
 .nav_sidebar--animated-right {
@@ -32,52 +32,85 @@
 }
 
 .divStretch {
-  min-width: 100.5%;
-  margin-left: -8px;
   animation: divStretch 1s ease;
+  min-width: 100%;
 }
 
 .divShrink {
-  min-width: calc(100% - 245px);
   animation: divStretch 1s ease;
+  min-width: calc(100% - 245px);
 }
 
 .height-expand {
   animation: height-expand .4s ease;
+  border: 0;
   min-height: 32px;
 }
 
 .height-shrink {
   animation: height-shrink .4s ease;
+  border: 0;
   min-height: 0;
 }
 
-.btn--user {
-  &:nth-child(1) {
-    position: relative;
-    border-bottom: 2px solid $white-color;
-    z-index: 2;
-    &:hover {
-      border-bottom: 2px solid $black-color;
-    }
+.btn--user,
+.btn--notification,
+.btn--task,
+.btn--mail {
+  border-bottom: 2px solid $white-color;
+  position: relative;
+  z-index: 2;
+  &:hover {
+    border-bottom: 2px solid $black-color;
   }
+  
 }
 
 .btn_dropdown {
-  max-height: 0;
   display: none;
+  max-height: 0;
 }
 
 .dropdown_wrapper {
-  position: absolute;
-  z-index: 3;
-  margin-left: -110px;
-  width: 150px;
   background-color: $white-color;
-  border-right: 1px solid $black-color;
-  border-left: 1px solid $black-color;
-  border-bottom: 1px solid $black-color;
-  border-radius: 0 0 10px 10px;
-  text-align: center;
+  border-bottom: 1px solid $greyish-color;
+  border-left: 1px solid $greyish-color;
+  border-radius: 0 0 2px 2px;
+  border-right: 1px solid $greyish-color;
   cursor: pointer;
+  margin-top: 5px;
+  margin-left: -160px;
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  z-index: 3;
+}
+
+.dropdown_wrapper--element {
+  border-bottom: 1px solid $grey-color;
+  max-height: 70px;
+}
+
+.info--top {
+  @extend %flex, %f-row, %w-max;
+  font-size: 15px;
+  margin-top: -10px;
+}
+
+.info--left {
+  width: 50%;
+  &:hover {
+    color: $blue-color;
+  }
+}
+
+.info--right {
+  width: 50%;
+  font-style: italic;
+  color: $red-color;
+}
+
+.info--message {
+  font-size: 13px;
+  margin-top: -20px;
 }

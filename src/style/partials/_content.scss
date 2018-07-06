@@ -4,17 +4,21 @@
 .wrapper {
   @extend %w-max;
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
+  max-height: 100%;
 }
 
 main {
   background-color: $yellow-color;
-  width: calc(100% - 245px);
-  height: calc(100% - 20.5px);
+  width: calc(100% - 251px);
   order: 2;
   z-index: 1;
 }
 
 .content-wrapper {
-  @extend %flex, %f-row;
+  @extend %flex, %f-row, %w-max;
+  height: calc(100% - 35px);
+}
+
+body {
+  @extend %m-0;
 }

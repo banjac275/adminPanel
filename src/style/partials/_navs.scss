@@ -1,6 +1,6 @@
-@import './modules/utilities.scss';
-@import './modules/colors.scss';
-@import 'mixins.scss';
+@import './modules/utilities';
+@import './modules/colors';
+@import 'mixins';
 
 ul {
   @extend %ml-20;
@@ -18,10 +18,8 @@ li {
 
 .nav_top {
   @extend %t-0, %f-row, %space-between, %w-max;
-  box-shadow: 0 8px 6px -6px $greyish-color;
+  border-bottom: 1px solid $greyish-color;
   height: 35px;
-  margin-left: -8px;
-  margin-top: -8px;
 }
 
 .nav_top--left {
@@ -34,7 +32,7 @@ li {
 .nav_top--right {
   @extend %flex, %f-row, %space-between;
   align-items: center;
-  width: 30%;
+  width: 40%;
 }
 
 .nav_sidebar {
@@ -46,26 +44,22 @@ li {
 
 .sidebar {
   padding-right: 10px;
-  border-top: 1px solid $white-color;
   border-bottom: 1px solid $white-color;
   div {
     @extend %flex, %space-between, %centered;
-    line-height: 40px;
     cursor: pointer;
+    line-height: 40px;
     &:hover {
-      @include rgba(bg, $grey-color, .7);
+      color: $red-color;
     }
   }
 }
 
 .sidebar--dropdown {
   @extend %flex, %f-col;
-    background-color: $black-color;
-    margin-right: -8px;
-    display: none;
-    div {
-      display: none;
-    }
+  background-color: $black-color;
+  display: none;
+  margin-right: -8px;
 }
 
 a {
@@ -75,14 +69,18 @@ a {
 .logo {
   background-color: $red-color;
   height: 35px;
+  text-align: center;
   width: 258px;
+  img {
+    max-height: 30px;
+    padding-top: 5px;
+  }
 }
 
 .nav_sidebar--wrapper {
   background-color: $grey-color;
-  height: 98%;
-  margin-left: -8px;
-  padding-left: 8px;
+  height: 100%;
   margin-right: 0;
   order: 1;
+  padding-left: 8px;
 }
