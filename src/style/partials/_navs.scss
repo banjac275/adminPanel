@@ -33,12 +33,13 @@ li {
   @extend %flex, %f-row, %space-between;
   align-items: center;
   width: 40%;
+  margin-right: 5px;
 }
 
 .nav_sidebar {
   @extend %f-col;
   color: $white-color;
-  min-width: 250px;
+  min-width: 258px;
   margin-top: 10px;
 }
 
@@ -82,5 +83,4 @@ a {
   height: 100%;
   margin-right: 0;
   order: 1;
-  padding-left: 8px;
 }

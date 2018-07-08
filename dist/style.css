@@ -154,7 +154,7 @@ ul {
 
 .divShrink {
   animation: divStretch 1s ease;
-  min-width: calc(100% - 245px); }
+  min-width: calc(100% - 258px); }
 
 .height-expand {
   animation: height-expand .4s ease;
@@ -191,7 +191,7 @@ ul {
   border-right: 1px solid #a8a6a6;
   cursor: pointer;
   margin-top: 5px;
-  margin-left: -160px;
+  margin-left: -168px;
   position: absolute;
   text-align: center;
   width: 200px;
@@ -269,11 +269,12 @@ li {
 
 .nav_top--right {
   align-items: center;
-  width: 40%; }
+  width: 40%;
+  margin-right: 5px; }
 
 .nav_sidebar {
   color: #fff;
-  min-width: 250px;
+  min-width: 258px;
   margin-top: 10px; }
 
 .sidebar {
@@ -306,8 +307,7 @@ a {
   background-color: #2b333e;
   height: 100%;
   margin-right: 0;
-  order: 1;
-  padding-left: 8px; }
+  order: 1; }
 
 body {
   margin: 0; }
@@ -345,7 +345,7 @@ ul {
 
 main {
   background-color: #fbca4a;
-  width: calc(100% - 251px);
+  width: calc(100% - 258px);
   order: 2;
   z-index: 1; }
 
@@ -403,10 +403,6 @@ main {
   to {
     min-height: 32px;
     opacity: 1; } }
-
-@media screen and (min-width: 768px) and (max-width: 960px) {
-  .nav_top {
-    height: 40px; } }
 
 * {
   box-sizing: border-box; }
