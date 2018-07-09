@@ -32,13 +32,15 @@
 }
 
 .divStretch {
-  animation: divStretch 1s ease;
+  //animation: divStretch 1s ease;
   min-width: 100%;
+  transition: min-width 1s;
 }
 
 .divShrink {
-  animation: divStretch 1s ease;
+  //animation: divStretch 1s ease;
   min-width: calc(100% - 258px);
+  transition: min-width 1s;
 }
 
 .height-expand {
@@ -113,4 +115,14 @@
 .info--message {
   font-size: 13px;
   margin-top: -20px;
+}
+
+.btn--settings {
+  border-bottom: 1px solid $greyish-color;
+}
+
+.options--mark {
+  &:hover {
+    color: $blue-color;
+  }
 }

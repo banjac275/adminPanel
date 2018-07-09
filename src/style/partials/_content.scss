@@ -1,5 +1,5 @@
-@import './modules/utilities.scss';
-@import './modules/colors.scss';
+@import './modules/utilities';
+@import './modules/colors';
 
 .wrapper {
   @extend %w-max;
@@ -21,4 +21,5 @@ main {
 
 body {
   @extend %m-0;
+  overflow-x: hidden;
 }

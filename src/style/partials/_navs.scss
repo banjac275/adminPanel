@@ -50,9 +50,6 @@ li {
     @extend %flex, %space-between, %centered;
     cursor: pointer;
     line-height: 40px;
-    &:hover {
-      color: $red-color;
-    }
   }
 }
 
@@ -61,6 +58,18 @@ li {
   background-color: $black-color;
   display: none;
   margin-right: -8px;
+  div {
+    &:hover {
+      color: $red-color;
+    }
+  }
+}
+
+.hovered {
+  padding-left: 10px;
+  &:hover {
+    color: $red-color;
+  }
 }
 
 a {

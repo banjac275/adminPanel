@@ -1,0 +1,23 @@
+@import './modules/utilities';
+@import './modules/colors';
+
+.user {
+  @extend %w-max;
+}
+
+.user--img {
+  min-width: 258px;
+  text-align: center;
+  img {
+    margin-top: 5px;
+    width: 250px;
+  }
+}
+
+.user--name {
+  color: $white-color;
+  font-size: 25px;
+  margin-top: 15px;
+  min-width: 258px;
+  text-align: center;
+}
