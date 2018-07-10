@@ -81,10 +81,10 @@
   border-right: 1px solid $greyish-color;
   cursor: pointer;
   margin-top: 5px;
-  margin-left: -168px;
+  margin-left: -253px;
   position: absolute;
   text-align: center;
-  width: 200px;
+  width: 290px;
   z-index: 3;
 }
 
@@ -100,6 +100,8 @@
 }
 
 .info--left {
+  margin-left: 15px;
+  text-align: left;
   width: 50%;
   &:hover {
     color: $blue-color;
@@ -107,9 +109,11 @@
 }
 
 .info--right {
-  width: 50%;
-  font-style: italic;
   color: $red-color;
+  font-style: italic;
+  margin-right: 15px;
+  text-align: right;
+  width: 40%;
 }
 
 .info--message {
@@ -125,4 +129,18 @@
   &:hover {
     color: $blue-color;
   }
+}
+
+.dropdown--user {
+  margin-left: -168px;
+  width: 200px;
+}
+
+.task--fill_chamber {
+  background-color: $blue-color;
+  border-radius: 5px;
+  height: 20px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  margin-top: -18px;
 }

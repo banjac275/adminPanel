@@ -20,6 +20,7 @@ li {
   @extend %t-0, %f-row, %space-between, %w-max;
   border-bottom: 1px solid $greyish-color;
   height: 35px;
+  z-index: 2;
 }
 
 .nav_top--left {
@@ -44,8 +45,8 @@ li {
 }
 
 .sidebar {
+  border-bottom: 1px solid $palewhite-color;
   padding-right: 10px;
-  border-bottom: 1px solid $white-color;
   div {
     @extend %flex, %space-between, %centered;
     cursor: pointer;
@@ -60,15 +61,17 @@ li {
   margin-right: -8px;
   div {
     &:hover {
-      color: $red-color;
+      color: $blue-color;
     }
   }
 }
 
 .hovered {
+  border-left: 6px solid $grey-color;
   padding-left: 10px;
   &:hover {
-    color: $red-color;
+    color: $blue-color;
+    border-left: 6px solid $blue-color;
   }
 }
 
